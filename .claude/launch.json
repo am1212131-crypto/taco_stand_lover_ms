@@ -6,6 +6,12 @@
       "runtimeExecutable": "npx",
       "runtimeArgs": ["serve", "-l", "5173", "."],
       "port": 5173
+    },
+    {
+      "name": "pace-runner",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "QI-2026_Summer-Team-C"],
+      "autoPort": true
     }
   ]
 }
