@@ -23,6 +23,14 @@
     text-align: center;
     padding: 6rem 1.5rem 5rem;
   }
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  .spin {
+    display: inline-block;
+    animation: spin 4s linear infinite;
+  }
   header .emoji { font-size: 3.5rem; }
   header h1 {
     font-size: 3rem;
@@ -129,7 +137,7 @@
 </head>
 <body>
   <header>
-    <div class="emoji">🌱</div>
+    <div class="emoji spin">🌱</div>
     <h1>AgriSage</h1>
     <p class="tagline">"We don't just name the problem. We walk you through it."</p>
     <p>작물 사진 한 장으로 병충해를 진단하고, 방제 방법을 추천하고, 사후관리까지 함께하는 AI 농업 지원 서비스</p>
@@ -140,17 +148,17 @@
     <section id="flow">
       <h2>진단부터 사후관리까지, 하나의 흐름으로</h2>
       <div class="flow">
-        <div class="step">📷 사진 촬영</div>
+        <div class="step"><span class="spin">📷</span> 사진 촬영</div>
         <div class="arrow">→</div>
-        <div class="step">🔍 AI 진단</div>
+        <div class="step"><span class="spin">🔍</span> AI 진단</div>
         <div class="arrow">→</div>
-        <div class="step">💬 결과 설명</div>
+        <div class="step"><span class="spin">💬</span> 결과 설명</div>
         <div class="arrow">→</div>
-        <div class="step">🧪 방제 추천</div>
+        <div class="step"><span class="spin">🧪</span> 방제 추천</div>
         <div class="arrow">→</div>
-        <div class="step">✅ 안전기준 체크</div>
+        <div class="step"><span class="spin">✅</span> 안전기준 체크</div>
         <div class="arrow">→</div>
-        <div class="step">📅 사후 확인</div>
+        <div class="step"><span class="spin">📅</span> 사후 확인</div>
       </div>
     </section>
 
@@ -158,22 +166,22 @@
       <h2>AgriSage가 해결하는 것</h2>
       <div class="features">
         <div class="feature">
-          <div class="icon">🩺</div>
+          <div class="icon spin">🩺</div>
           <h3>신뢰할 수 있는 1차 진단</h3>
           <p>사진 한 장으로 38개 작물-질병 조합을 분류하고, 판단 근거를 이해하기 쉬운 언어로 설명합니다.</p>
         </div>
         <div class="feature">
-          <div class="icon">🎯</div>
+          <div class="icon spin">🎯</div>
           <h3>맞춤형 방제 추천</h3>
           <p>재배 목적, 유기농 여부 등 사용자 상황에 맞춰 검증된 제품만 추천합니다.</p>
         </div>
         <div class="feature">
-          <div class="icon">🛡️</div>
+          <div class="icon spin">🛡️</div>
           <h3>PLS 안전기준 자동 체크</h3>
           <p>수확 예정일과 농약 안전사용기간을 비교해, 잔류허용기준 초과로 인한 폐기 위험을 미리 막습니다.</p>
         </div>
         <div class="feature">
-          <div class="icon">🔁</div>
+          <div class="icon spin">🔁</div>
           <h3>폐루프 사후관리</h3>
           <p>방제 후 재사진을 요청해 개선 여부를 확인하고, 필요하면 재진단으로 이어집니다.</p>
         </div>
