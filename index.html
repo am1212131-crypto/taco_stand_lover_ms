@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgriSage</title>
+<style>
+  :root {
+    --sage-green: #4a7c59;
+    --sage-dark: #2f4d3a;
+    --sage-gold: #d9a441;
+    --sage-cream: #f7f5ef;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Malgun Gothic", sans-serif;
+    background: var(--sage-cream);
+    color: #263229;
+  }
+  header {
+    background: linear-gradient(135deg, var(--sage-dark), var(--sage-green));
+    color: white;
+    text-align: center;
+    padding: 6rem 1.5rem 5rem;
+  }
+  header .emoji { font-size: 3.5rem; }
+  header h1 {
+    font-size: 3rem;
+    margin: 0.5rem 0;
+    letter-spacing: -1px;
+  }
+  header .tagline {
+    font-size: 1.1rem;
+    font-style: italic;
+    opacity: 0.85;
+    margin-bottom: 1rem;
+  }
+  header p {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    max-width: 36rem;
+    margin: 0 auto;
+  }
+  .cta {
+    display: inline-block;
+    margin-top: 2rem;
+    background: var(--sage-gold);
+    color: var(--sage-dark);
+    font-weight: 700;
+    padding: 0.9rem 2rem;
+    border-radius: 999px;
+    text-decoration: none;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    transition: transform 0.15s ease;
+  }
+  .cta:hover { transform: translateY(-2px); }
+
+  main {
+    max-width: 62rem;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+  }
+  section { margin-bottom: 4rem; }
+  h2 {
+    color: var(--sage-dark);
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .flow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .flow .step {
+    background: white;
+    border: 1px solid #e2ddd0;
+    border-radius: 0.75rem;
+    padding: 1rem 1.25rem;
+    font-size: 0.95rem;
+    text-align: center;
+    min-width: 8rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  }
+  .flow .arrow {
+    color: var(--sage-green);
+    font-size: 1.25rem;
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+  }
+  .feature {
+    background: white;
+    border-radius: 0.75rem;
+    padding: 1.75rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  .feature .icon { font-size: 2.25rem; margin-bottom: 0.75rem; }
+  .feature h3 { color: var(--sage-dark); margin-bottom: 0.5rem; font-size: 1.05rem; }
+  .feature p { font-size: 0.9rem; color: #55605a; line-height: 1.5; }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    background: var(--sage-dark);
+    color: white;
+    border-radius: 1rem;
+    padding: 2.5rem 1.5rem;
+  }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2rem; font-weight: 700; color: var(--sage-gold); }
+  .stat .label { font-size: 0.85rem; opacity: 0.85; margin-top: 0.25rem; }
+
+  footer {
+    text-align: center;
+    padding: 2rem;
+    color: #888;
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="emoji">🌱</div>
+    <h1>AgriSage</h1>
+    <p class="tagline">"We don't just name the problem. We walk you through it."</p>
+    <p>작물 사진 한 장으로 병충해를 진단하고, 방제 방법을 추천하고, 사후관리까지 함께하는 AI 농업 지원 서비스</p>
+    <a class="cta" href="#features">더 알아보기</a>
+  </header>
+
+  <main>
+    <section id="flow">
+      <h2>진단부터 사후관리까지, 하나의 흐름으로</h2>
+      <div class="flow">
+        <div class="step">📷 사진 촬영</div>
+        <div class="arrow">→</div>
+        <div class="step">🔍 AI 진단</div>
+        <div class="arrow">→</div>
+        <div class="step">💬 결과 설명</div>
+        <div class="arrow">→</div>
+        <div class="step">🧪 방제 추천</div>
+        <div class="arrow">→</div>
+        <div class="step">✅ 안전기준 체크</div>
+        <div class="arrow">→</div>
+        <div class="step">📅 사후 확인</div>
+      </div>
+    </section>
+
+    <section id="features">
+      <h2>AgriSage가 해결하는 것</h2>
+      <div class="features">
+        <div class="feature">
+          <div class="icon">🩺</div>
+          <h3>신뢰할 수 있는 1차 진단</h3>
+          <p>사진 한 장으로 38개 작물-질병 조합을 분류하고, 판단 근거를 이해하기 쉬운 언어로 설명합니다.</p>
+        </div>
+        <div class="feature">
+          <div class="icon">🎯</div>
+          <h3>맞춤형 방제 추천</h3>
+          <p>재배 목적, 유기농 여부 등 사용자 상황에 맞춰 검증된 제품만 추천합니다.</p>
+        </div>
+        <div class="feature">
+          <div class="icon">🛡️</div>
+          <h3>PLS 안전기준 자동 체크</h3>
+          <p>수확 예정일과 농약 안전사용기간을 비교해, 잔류허용기준 초과로 인한 폐기 위험을 미리 막습니다.</p>
+        </div>
+        <div class="feature">
+          <div class="icon">🔁</div>
+          <h3>폐루프 사후관리</h3>
+          <p>방제 후 재사진을 요청해 개선 여부를 확인하고, 필요하면 재진단으로 이어집니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="why">
+      <h2>왜 지금 필요한가</h2>
+      <div class="stats">
+        <div class="stat">
+          <div class="num">73.8%</div>
+          <div class="label">정착 후 3년 내 재이주를 결정한 귀농인 비율</div>
+        </div>
+        <div class="stat">
+          <div class="num">79%</div>
+          <div class="label">실제 병충해가 아닌 재배 관리 문제였던 상담 비율</div>
+        </div>
+        <div class="stat">
+          <div class="num">777건</div>
+          <div class="label">약 4.4만 건 중 잔류농약 기준 초과 판정 건수</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 AgriSage — Team C. Agriculture + Sage.
+  </footer>
+</body>
+</html>
