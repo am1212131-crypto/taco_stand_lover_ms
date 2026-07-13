@@ -82,6 +82,10 @@
   .step.active { display: block; }
 
   .upload-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border: 2px dashed #cfc7b3;
     border-radius: 0.75rem;
     padding: 2.5rem 1.5rem;
@@ -92,6 +96,13 @@
   }
   .upload-box:hover { border-color: var(--sage-green); }
   .upload-box input { display: none; }
+  .upload-box.has-preview { padding: 1rem; }
+  #upload-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .upload-box.has-preview #upload-placeholder { display: none; }
   .upload-box .icon { font-size: 2.5rem; display: block; margin-bottom: 0.5rem; }
   #preview {
     max-width: 100%;
@@ -236,8 +247,10 @@
     <div class="card step active" id="step-1">
       <h2>1. 작물 잎 사진 업로드</h2>
       <label class="upload-box" id="upload-box">
-        <span class="icon">📷</span>
-        <span>클릭해서 사진을 선택하세요</span>
+        <span id="upload-placeholder">
+          <span class="icon">📷</span>
+          <span>클릭해서 사진을 선택하세요</span>
+        </span>
         <input type="file" id="file-input" accept="image/*">
         <img id="preview" alt="업로드한 사진 미리보기">
       </label>
@@ -381,6 +394,7 @@
     reader.onload = e => {
       preview.src = e.target.result;
       preview.style.display = "block";
+      uploadBox.classList.add("has-preview");
       toDiagnose.disabled = false;
     };
     reader.readAsDataURL(file);
@@ -463,6 +477,7 @@
   document.getElementById("restart").addEventListener("click", () => {
     fileInput.value = "";
     preview.style.display = "none";
+    uploadBox.classList.remove("has-preview");
     toDiagnose.disabled = true;
     document.getElementById("harvest-date").value = "";
     document.getElementById("pls-result").className = "pls-box";
