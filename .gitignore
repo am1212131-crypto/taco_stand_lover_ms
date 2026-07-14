@@ -1,1 +1,5 @@
 QI-2026_Summer-Team-C/
+node_modules/
+.env
+.env.*
+!.env.example
